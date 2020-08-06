@@ -1,0 +1,759 @@
+<?php
+/* Copyright (C) 2018-2019 Gabriel Roberto Carpio Meneses <gabriel@quantumbit.mx>
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+// Load Dolibarr environment
+$res=0;
+// Try main.inc.php into web root known defined into CONTEXT_DOCUMENT_ROOT (not always defined)
+if (! $res && ! empty($_SERVER["CONTEXT_DOCUMENT_ROOT"])) $res=@include($_SERVER["CONTEXT_DOCUMENT_ROOT"]."/main.inc.php");
+// Try main.inc.php into web root detected using web root calculated from SCRIPT_FILENAME
+$tmp=empty($_SERVER['SCRIPT_FILENAME'])?'':$_SERVER['SCRIPT_FILENAME'];$tmp2=realpath(__FILE__); $i=strlen($tmp)-1; $j=strlen($tmp2)-1;
+while($i > 0 && $j > 0 && isset($tmp[$i]) && isset($tmp2[$j]) && $tmp[$i]==$tmp2[$j]) { $i--; $j--; }
+if (! $res && $i > 0 && file_exists(substr($tmp, 0, ($i+1))."/main.inc.php")) $res=@include(substr($tmp, 0, ($i+1))."/main.inc.php");
+if (! $res && $i > 0 && file_exists(dirname(substr($tmp, 0, ($i+1)))."/main.inc.php")) $res=@include(dirname(substr($tmp, 0, ($i+1)))."/main.inc.php");
+// Try main.inc.php using relative path
+if (! $res && file_exists("../main.inc.php")) $res=@include("../main.inc.php");
+if (! $res && file_exists("../../main.inc.php")) $res=@include("../../main.inc.php");
+if (! $res && file_exists("../../../main.inc.php")) $res=@include("../../../main.inc.php");
+if (! $res) die("Include of main fails");
+
+//require_once(DOL_DOCUMENT_ROOT.'/core/class/html.formcompany.class.php');
+//require_once DOL_DOCUMENT_ROOT.'/core/lib/date.lib.php';
+//require_once DOL_DOCUMENT_ROOT.'/core/lib/company.lib.php';
+include_once "admin/helper/conexionex.php";
+// Load translation files required by the page
+$langs->loadLangs(array("autotran@autotran"));
+
+$action=GETPOST('action', 'alpha');
+
+
+// Securite acces client
+//if (!$user->rights->autotran->read) accessforbidden();
+if (! $user->admin) accessforbidden();
+$projectid=(GETPOST('projectid')?GETPOST('projectid','int'):0);
+
+$id=(GETPOST('id','int')?GETPOST('id','int'):GETPOST('facid','int'));
+$socid=GETPOST('socid','int');
+if (isset($user->societe_id) && $user->societe_id > 0)
+{
+	$action = '';
+	$socid = $user->societe_id;
+}
+$factura_select = GETPOST("factura");
+$massaction=GETPOST('massaction','alpha');
+$max=5;
+$limit = GETPOST('limit','int')?GETPOST('limit','int'):$conf->liste_limit;
+$sortfield = GETPOST("sortfield",'alpha');
+$sortorder = GETPOST("sortorder",'alpha');
+$page = GETPOST("page",'int');
+if (empty($page) || $page == -1) { $page = 0; }   // If $page is not defined, or '' or -1
+$offset = $limit * $page;
+$pageprev = $page - 1;
+$pagenext = $page + 1;
+
+if (! $sortfield) $sortfield="rowid";
+if (! $sortorder) $sortorder="DESC";
+
+$now=dol_now();
+
+$arrayfields=array(
+	'rowid'=>array('label'=>$langs->trans("ID"), 'checked'=>1),
+	'FolioFiscal'=>array('label'=>$langs->trans("Folio SAT"), 'checked'=>1),
+	'Concepto'=>array('label'=>$langs->trans("Tipo"), 'checked'=>1),
+	'linked'=>array('label'=>$langs->trans(" "), 'checked'=>1),
+	'Factura'=>array('label'=>$langs->trans("Factura"), 'checked'=>1),
+	'Poliza'=>array('label'=>$langs->trans("Poliza"), 'checked'=>1),
+	'RFCemisor'=>array('label'=>$langs->trans("RFC del emisor"), 'checked'=>1),
+	'NombreEmisor'=>array('label'=>$langs->trans("Nombre del Emisor"), 'checked'=>1),
+	'RFCreceptor'=>array('label'=>$langs->trans("RFC del receptor"), 'checked'=>1),
+	'NombreReceptor'=>array('label'=>$langs->trans("Nombre del Receptor"), 'checked'=>1),
+	'fechaEmision'=>array('label'=>$langs->trans("Fecha de Emision"), 'checked'=>1),
+	'fechaCertificacion'=>array('label'=>$langs->trans("Fecha de Certificacion"), 'checked'=>1),
+	'PAC'=>array('label'=>$langs->trans("PAC que certificó"), 'checked'=>0),
+	'Total'=>array('label'=>$langs->trans("Total"), 'checked'=>1),
+	'Efecto'=>array('label'=>$langs->trans("Efecto"), 'checked'=>1),
+	'Estado'=>array('label'=>$langs->trans("Estado"), 'checked'=>1),
+);
+$consultaRobot = array();
+$consultaParams = ['MsgError' , 'UltmaVerificacion'];
+/*
+ * Actions
+ */
+
+$query1 = "SELECT FechaUltimaActualizacion FROM ".MAIN_DB_PREFIX ."autotran_parametros WHERE organizacionRFC = '".$conf->global->MAIN_INFO_SIREN."'";
+$query2 = "SELECT MsgError FROM sys_autotran_parametros WHERE organizacionRFC = '".$conf->global->MAIN_INFO_SIREN."'";
+
+$resql1=$db->query($query1);
+
+if ($resql1)
+{
+		$num = $db->num_rows($resql1);
+		$i = 0;
+		if ($num)
+		{
+				while ($i < $num)
+				{
+						$obj = $db->fetch_object($resql1);
+						if ($obj)
+						{
+								$consultaParams['UltimaVerificacion'] = $obj->FechaUltimaActualizacion;
+						}
+						$i++;
+				}
+		}
+		
+}
+$hoy = getdate();
+if(strlen($hoy['mday'])==1)
+{
+$dia = "0".$hoy['mday'];
+}
+else
+{
+	$dia = $hoy['mday'];
+}
+if(strlen($hoy['mon'])==1)
+{
+$mon = "0".$hoy['mon'];
+}
+else
+{
+	$mon = $hoy['mon'];
+}
+$fechahoy = $hoy['mday'].'/'.$hoy['mon'].'/'.$hoy['year'];
+$fechaformato = $hoy['year'].'-'.$mon.'-'.$dia;
+$query3 = "UPDATE ".MAIN_DB_PREFIX ."autotran_parametros SET FechaUltimaActualizacion = '".$fechaformato."' WHERE organizacionRFC = '".$conf->global->MAIN_INFO_SIREN."'";
+$fechaUver = $consultaParams['UltimaVerificacion'];
+//print_r($fechaformato. " " .$fechaUver);
+//if(!($fechaformato == $fechaUver))
+if(true)
+{
+	//print_r("entro en consulta externa");
+	$link = new conexionex();
+	$res = $link ->consultarTabla($query2);
+	$consultaParams['MsgError'][0] = $res['MsgError'];
+	$consultaParams['UltimaVerificacion'][0] = $hoy;
+	if($res['MsgError'] == ''||$res['MsgError'] == null||$res['MsgError'] == ' ')
+	{
+		$query2 = "SELECT FolioFiscal,Concepto,RFCemisor, NombreEmisor,RFCreceptor,NombreReceptor,fechaemision,fechaCertificacion,PAC,Total,Efecto,Estado FROM sys_autotran_facturas WHERE organizacionRFC = '".$conf->global->MAIN_INFO_SIREN."'";
+		$tab = $link -> escribirTabla($query2);
+		//print_r($tab);
+		$i = 0;
+		$query1 = "";
+		while($i < count($tab))
+		{
+		//print_r($tab[$i]['fechaemision']);
+		$query1 = "";
+		$query1.= "INSERT INTO ". MAIN_DB_PREFIX ."autotran_facturas";
+		$query1.= "(organizacionId, Concepto, FolioFiscal , RFCemisor, NombreEmisor, RFCreceptor ,NombreReceptor , FechaEmision ,FechaCertificacion , PAC ,Total, Efecto,Estado,RFCorganizacion,rowId)";
+		$query1.="VALUES(1,".$tab[$i]['Concepto'].",'".$tab[$i]['FolioFiscal']."','".$tab[$i]['RFCemisor']."','".$tab[$i]['NombreEmisor']."','".$tab[$i]['RFCreceptor']."','".$tab[$i]['NombreReceptor']."','";
+		$query1.=$tab[$i]['fechaemision']."','".$tab[$i]['fechaCertificacion']."','".$tab[$i]['PAC']."','".$tab[$i]['Total']."','".$tab[$i]['Efecto']."','".$tab[$i]['Estado']."',";
+		$query1.="'".$conf->global->MAIN_INFO_SIREN."', 0);";
+		//print_r($query1);
+		$db->query($query1);
+		$i++;
+		}
+		$db->query($query3);		
+	}
+}
+
+if (GETPOST('cancel','alpha')) { $action='list'; $massaction=''; }
+if (! GETPOST('confirmmassaction','alpha') && $massaction != 'presend' && $massaction != 'confirm_presend') { $massaction=''; }
+
+$parameters=array('socid'=>$socid);
+$reshook=$hookmanager->executeHooks('doActions',$parameters,$object,$action);    // Note that $action and $object may have been modified by some hooks
+if ($reshook < 0) setEventMessages($hookmanager->error, $hookmanager->errors, 'errors');
+
+if (empty($reshook))
+{
+	$objectclass='Autotran';
+	$objectlabel='Autotran';
+	$permtoread = $user->rights->autotran->lire;
+	$permtocreate = $user->rights->autotran->creer;
+	$permtodelete = $user->rights->autotran->supprimer;
+	$uploaddir = $conf->autotran->dir_output;
+	include DOL_DOCUMENT_ROOT.'/core/actions_massactions.inc.php';
+}
+
+	//$rsql = "Select rowId,FolioFiscal,Concepto,RFCemisor,NombreEmisor,RFCreceptor,NombreReceptor,fechaEmision,fechaCertificacion,PAC,Total,Efecto,Estado FROM llx_autotran_facturas WHERE RFCorganizacion = '".$conf->global->MAIN_INFO_SIREN."'";
+
+/*
+ * View
+ */
+
+llxHeader("",$langs->trans("AutoTran"));
+
+print load_fiche_titre($langs->trans("AutoTran"),'','autotran.png@autotran');
+
+$order = $_GET['sortfield'];
+$direccion = $_GET['sortorder'];
+$sql = 'SELECT ';
+$sql.= 'rowid, FolioFiscal , Factura, Poliza, ';
+$sql.= 'IF(Concepto=true, "Emitido" , "Recibido") AS Concepto ,';
+$sql.= 'RFCemisor,NombreEmisor,RFCreceptor,NombreReceptor,fechaEmision,fechaCertificacion,PAC,Total,Efecto,Estado ';
+$sql.= 'FROM ' . MAIN_DB_PREFIX . 'autotran_facturas ';
+$sql.= "WHERE RFCorganizacion = '".$conf->global->MAIN_INFO_SIREN."'";
+
+if($order != '')
+{
+	$sql.= " ORDER BY ";
+	$sql.= $order . ' ' .$direccion;
+	//print 'entro';
+}
+else
+{
+	//print 'no entro';
+	$sql.= " ORDER BY Concepto DESC";
+}
+//print_r($sql);
+$db->query('SET NAMES utf8;');
+$nbtotalofrecords = '';
+if (empty($conf->global->MAIN_DISABLE_FULL_SCANLIST))
+{
+	$result = $db->query($sql);
+	$nbtotalofrecords = $db->num_rows($result);
+	if (($page * $limit) > $nbtotalofrecords)	// if total resultset is smaller then paging size (filtering), goto and load page 0
+	{
+		$page = 0;
+		$offset = 0;
+	}
+}
+$sql.= $db->plimit($limit+1,$offset);
+
+//Aqui el query se encuentra totalmente armado
+
+//Array para introducir info de la consulta
+
+$terceroscreados = false;
+//print $sql;
+$resql = $db->query($sql);
+if ($resql)
+{
+	$num= $db->num_rows($resql);
+
+	$arrayofselected=is_array($toselect)?$toselect:array();
+
+	$param='';
+	if (! empty($contextpage) && $contextpage != $_SERVER["PHP_SELF"]) $param.='&contextpage='.urlencode($contextpage);
+	if ($limit > 0 && $limit != $conf->liste_limit) $param.='&limit='.urlencode($limit);
+	$i = 0;
+	//action="'.$_SERVER["PHP_SELF"].'"
+	print '<form method="POST" name="searchFormList" >'."\n";
+	print '<input type="hidden" name="token" value="'.$_SESSION['newtoken'].'"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/ajax.js"></script>';
+	print '<input type="hidden" name="formfilteraction" id="formfilteraction" value="list">';
+	print '<input type="hidden" name="action" value="list">';
+	print '<input type="hidden" name="sortfield" value="'.$sortfield.'">';
+	print '<input type="hidden" name="sortorder" value="'.$sortorder.'">';
+	print '<input type="hidden" name="page" value="'.$page.'">';
+	print '<input type="hidden" name="contextpage" value="'.$contextpage.'">';
+
+	print_barre_liste("CFDI", $page, $_SERVER["PHP_SELF"],'', $sortfield , $sortorder,'', $num, $nbtotalofrecords, 'xml.png', 0, $newcardbutton, '', $limit);
+
+	$parameters=array();
+	$reshook=$hookmanager->executeHooks('printFieldPreListTitle',$parameters);    // Note that $action and $object may have been modified by hook
+	if (empty($reshook)) $moreforfilter .= $hookmanager->resPrint;
+	else $moreforfilter = $hookmanager->resPrint;
+
+	$varpage=empty($contextpage)?$_SERVER["PHP_SELF"]:$contextpage;
+	$selectedfields=$form->multiSelectArrayWithCheckbox('selectedfields', $arrayfields, $varpage);
+	print '<div class="div-table-responsive">';
+	print '<table class="tagtable liste'.($moreforfilter?" listwithfilterbefore":"").'">'."\n";
+	
+	//Creacion de columnas
+	print '<tr class="liste_titre">';
+	if (! empty($arrayfields['rowid']['checked']))
+		print_liste_field_titre($arrayfields['rowid']['label'],$_SERVER['PHP_SELF'],'rowid','',$param,'',$sortfield,$sortorder);
+	if (! empty($arrayfields['FolioFiscal']['checked']))
+		print_liste_field_titre($arrayfields['FolioFiscal']['label'],$_SERVER['PHP_SELF'],'FolioFiscal','',$param,'',$sortfield,$sortorder);
+	if (! empty($arrayfields['Concepto']['checked']))
+		print_liste_field_titre($arrayfields['Concepto']['label'],$_SERVER['PHP_SELF'],'Concepto','',$param,'',$sortfield,$sortorder);
+	if($arrayfields['linked']['checked'])
+		print_liste_field_titre($arrayfields['linked']['label'],$_SERVER['PHP_SELF'],'linked','',$param,'',$sortfield,$sortorder);
+	if($arrayfields['Factura']['checked'])
+		print_liste_field_titre($arrayfields['Factura']['label'],$_SERVER['PHP_SELF'],'Factura','',$param,'',$sortfield,$sortorder);
+	if($arrayfields['Poliza']['checked'])
+		print_liste_field_titre($arrayfields['Poliza']['label'],$_SERVER['PHP_SELF'],'Poliza','',$param,'',$sortfield,$sortorder);
+	if (! empty($arrayfields['RFCemisor']['checked']))
+		print_liste_field_titre($arrayfields['RFCemisor']['label'],$_SERVER['PHP_SELF'],'RFCemisor','',$param,'',$sortfield,$sortorder);
+	if (! empty($arrayfields['NombreEmisor']['checked']))
+		print_liste_field_titre($arrayfields['NombreEmisor']['label'],$_SERVER['PHP_SELF'],'NombreEmisor','',$param,'',$sortfield,$sortorder);
+	if (! empty($arrayfields['RFCreceptor']['checked']))
+		print_liste_field_titre($arrayfields['RFCreceptor']['label'],$_SERVER['PHP_SELF'],'RFCreceptor','',$param,'',$sortfield,$sortorder);
+	if (! empty($arrayfields['NombreReceptor']['checked']))
+		print_liste_field_titre($arrayfields['NombreReceptor']['label'],$_SERVER['PHP_SELF'],'NombreReceptor','',$param,'',$sortfield,$sortorder);
+	if (! empty($arrayfields['fechaEmision']['checked']))
+		print_liste_field_titre($arrayfields['fechaEmision']['label'],$_SERVER['PHP_SELF'],'fechaEmision','',$param,'',$sortfield,$sortorder);
+	if (! empty($arrayfields['fechaCertificacion']['checked']))
+		print_liste_field_titre($arrayfields['fechaCertificacion']['label'],$_SERVER['PHP_SELF'],'fechaCertificacion','',$param,'',$sortfield,$sortorder);
+	if (! empty($arrayfields['PAC']['checked']))
+		print_liste_field_titre($arrayfields['PAC']['label'],$_SERVER['PHP_SELF'],'PAC','',$param,'',$sortfield,$sortorder);
+	if (! empty($arrayfields['Total']['checked']))
+		print_liste_field_titre($arrayfields['Total']['label'],$_SERVER['PHP_SELF'],'Total','',$param,'',$sortfield,$sortorder);
+	if (! empty($arrayfields['Efecto']['checked']))
+		print_liste_field_titre($arrayfields['Efecto']['label'],$_SERVER['PHP_SELF'],'Efecto','',$param,'',$sortfield,$sortorder);
+	if (! empty($arrayfields['Estado']['checked']))
+	    print_liste_field_titre($arrayfields['Estado']['label'],$_SERVER['PHP_SELF'],'Estado','',$param,'',$sortfield,$sortorder);
+	print_liste_field_titre($selectedfields, $_SERVER["PHP_SELF"],"",'','','align="center"',$sortfield,$sortorder,'maxwidthsearch ');
+	print "</tr>\n";
+
+	if($num > 0)
+	{
+		$i=0;
+		$totalarray=array();
+		
+		while($i < min($num,$limit))
+		{
+			
+			//Creacion de Filas
+			$obj = $db->fetch_object($resql);
+			print '<tr class="oddeven">';
+			if (! empty($arrayfields['rowid']['checked']))
+			{
+				print '<td class="nowrap">';
+		    print $obj->rowid;
+				//$tablat[$i][0] = $obj->rowid;
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			
+		if (! empty($arrayfields['FolioFiscal']['checked']))
+		{
+			print '<td class="nowrap">';
+			if(file_exists("Factura/xml/". $obj->FolioFiscal.".xml"))
+			{
+				print "<a href='Factura/xml/".$obj->FolioFiscal.".xml' target = '_blank'>".$obj->FolioFiscal."</a>";
+			} 
+			else
+			{
+				print $obj->FolioFiscal;
+			}
+			
+			//print '<a id = folioFiscal onclick ="down(\''.$conf->global->MAIN_INFO_SIREN.'\',\''.$obj->FolioFiscal.'\')">'.$obj->FolioFiscal.'</a>';
+	//$tablat[$i][1] = $obj->FolioFiscal;
+			print '</td>';
+			if (! $i) $totalarray['nbfield']++;
+		}
+		if (! empty($arrayfields['Concepto']['checked']))
+		{
+			print '<td class="nowrap">';
+			print $obj->Concepto;
+				$tablat[$i][2] = $obj->Concepto;
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			$consepto = $obj->Concepto;
+			if($consepto == "Recibido")
+			{
+				$emisorRfc = $obj->RFCemisor;
+			}
+			else
+			{
+				$emisorRfc = $obj->RFCreceptor;
+			}
+			if($arrayfields['linked']['checked'])
+			{
+				print '<td class="nowrap">';
+				if($obj->Estado != "Cancelado")
+				{
+					$tsql="SELECT COUNT(*) AS count FROM ".MAIN_DB_PREFIX."societe WHERE siren='".$emisorRfc."'";
+					$tc= $db->query($tsql);
+					if($tc)
+					{
+						$nm = $db->num_rows($tc);
+						if($nm)
+						{
+							$objt = $db->fetch_object($tc);
+							if($objt)
+							{
+								$count = $objt->count;
+								if($count == 0)
+								{
+									print '<img src="/csi/theme/md/img/statut4.png" alt="" title="new" class="pictostatus">';
+									//$tablat[$i][3] = '<img src="/dolibarr/theme/md/img/statut4.png" alt="" title="new" class="pictostatus">';
+
+								}
+								else
+								{
+									print '<img src="/csi/theme/md/img/statut9.png" alt="" title="new" class="pictostatus">';
+									//$tablat[$i][3] = '<img src="/dolibarr/theme/md/img/statut9.png" alt="" title="new" class="pictostatus">';
+
+								}
+							}
+							
+						}
+						
+						
+					}
+					else
+					{
+						print $obj->NombreEmisor;
+					}
+				}
+				else
+				{
+					print '<img src="/csi/theme/md/img/statut8.png" alt="" title="new" class="pictostatus">';
+				}
+				
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			if($arrayfields['Factura']['checked'])
+			{
+				print '<td class="nowrap">';
+				if($obj->Estado != "Cancelado")
+				{
+					if($obj->Factura != null && $obj->Factura != '' && $obj->Factura != " ")
+					{
+						if($emisorRfc == $obj->RFCemisor)
+						{
+							$tsql0="SELECT rowid FROM ".MAIN_DB_PREFIX."facture_fourn WHERE ref='".$obj->Factura."'";
+						}
+						else
+						{
+							$tsql0="SELECT rowid FROM ".MAIN_DB_PREFIX."facture WHERE facnumber='".$obj->Factura."'";
+						}
+						//print $tsql0;
+						$numTercero = null;
+						$tc0= $db->query($tsql0);
+						if($tc0)
+						{
+							$nm0 = $db->num_rows($tc0);
+							if($nm0)
+							{
+								$objt0 = $db->fetch_object($tc0);
+								if($objt0)
+								{
+									if($emisorRfc == $obj->RFCemisor)
+									{
+										
+										print "<a href='../fourn/facture/card.php?id=".$objt0->rowid."'>".$obj->Factura."</a>";
+										print '<input type ="image" id="quitar'.$obj->rowid.'" src="/csi/theme/md/img/delete.png" onclick = "QuitarFactura(\''.$obj->rowid.'\')"/>';
+									}
+									else
+									{
+										print "<a href='../compta/facture/card.php?facid=".$objt0->rowid."'>".$obj->Factura."</a>";
+										print '<input type ="image" id="quitar'.$obj->rowid.'" src="/csi/theme/md/img/delete.png" onclick = "QuitarFactura(\''.$obj->rowid.'\')"/>';
+									}
+									$numTercero = $objt0->rowid;
+								}
+							}				
+						}
+	
+					
+					}
+					else
+					{
+						if($emisorRfc == $obj->RFCemisor)
+					{
+						$tsql="SELECT f.rowid as row,f.ref as ref,f.total_ttc as total FROM ".MAIN_DB_PREFIX."facture_fourn AS f ";
+					}
+					else
+					{
+						$tsql="SELECT f.rowid as row,f.facnumber as ref,f.total_ttc as total FROM ".MAIN_DB_PREFIX."facture AS f ";
+					
+					}
+					$tsql.="INNER JOIN ".MAIN_DB_PREFIX."societe AS s ";
+					$tsql.="ON f.fk_soc = s.rowid ";
+					$tsql.="AND s.siren = '".$emisorRfc."' ";
+					$tsql.="WHERE ref NOT IN (SELECT Factura FROM ";
+					$tsql.="llx_autotran_facturas WHERE Factura is NOT null) AND ref NOT LIKE '%PROV%'";
+					$fact = array();
+					//print $tsql;
+					$tc1= $db->query($tsql);
+					if($tc1)
+					{
+						$nm1 = $db->num_rows($tc1);
+						$i1 = 0;
+						if($nm1)
+							{
+								while($i1 < $nm1)
+								{
+									$ojt = $db->fetch_object($tc1);
+									if($ojt)
+									{
+										$fact[$i1] = array($ojt->row,$ojt->ref,$ojt->total);
+										
+									}
+									$i1++;
+								}
+							}
+						}
+						print '<div id="actualizar'.$obj->rowid.'"><select id="factura'.$obj->rowid.'" action = "autotranindex.php?action=nuevo" onchange="Registrar(\''.$obj->FolioFiscal.'\' , $(\'#factura'.$obj->rowid.'\').val(),\''.$obj->rowid.'\',\''.$obj->Total.'\',\''.$conf->global->MAIN_INFO_SIREN.'\')">
+					<option value="" disabled selected>--Seleccione--</option>
+					<option value="n" >--Crear Nueva--</option>';
+					for($i2 = 0 ;$i2< count($fact); $i2++)
+					{
+						print '<option value="'.$fact[$i2][1].' '.$fact[$i2][2].'" >'.$fact[$i2][1]. ' Total: $'.substr($fact[$i2][2],0,-6).'</option>';
+					}
+						print '</select></div><script type="text/javascript">
+						</script>';
+					}
+				}
+				
+				//print $tsql;
+			print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			if($arrayfields['Poliza']['checked'])
+			{
+				print '<td class="nowrap"><div id="respuesta'.$obj->rowid.'"></div>';
+				if($obj->Estado != "Cancelado")
+				{
+					print "<a href='../contab/polizas/fiche.php?fp=1&facid=".$numTercero."'>".$obj->Poliza."</a>";
+				}
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			if (! empty($arrayfields['RFCemisor']['checked']))
+			{
+				print '<td class="nowrap">';
+				print $obj->RFCemisor;
+				//$tablat[$i][6] = $obj->RFCemisor;
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			if (! empty($arrayfields['NombreEmisor']['checked']))
+			{
+				print '<td class="nowrap">';
+				if($emisorRfc == $obj->RFCemisor)
+				{
+					$tsql="SELECT rowid FROM ".MAIN_DB_PREFIX."societe WHERE siren='".$emisorRfc."'";
+					$tc= $db->query($tsql);
+					if($tc)
+					{
+						$nm = $db->num_rows($tc);
+						if($nm)
+						{
+							$objt = $db->fetch_object($tc);
+							if($objt)
+							{
+								print "<a href='../societe/card.php?socid=".$objt->rowid."'>".strtoupper($obj->NombreEmisor)."</a>";
+								//$tablat[$i][7] = "<a href='../societe/card.php?socid=".$objt->rowid."'>".$obj->NombreEmisor."</a>";
+							}
+							else
+							{
+							print strtoupper($obj->NombreEmisor);
+							//$tablat[$i][7] = $obj->NombreEmisor;
+							}
+						}
+						else
+						{
+						print strtoupper($obj->NombreEmisor);
+						//$tablat[$i][7] = $obj->NombreEmisor;
+						}
+						
+						
+					}
+					else
+					{
+						print strtoupper($obj->NombreEmisor);
+						//$tablat[$i][7] = $obj->NombreEmisor;
+					}
+					
+				}
+				else
+				{
+					print strtoupper($obj->NombreEmisor);
+					//$tablat[$i][7] = $obj->NombreEmisor;
+				}
+				
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			if (! empty($arrayfields['RFCreceptor']['checked']))
+			{
+				print '<td class="nowrap">';
+				print $obj->RFCreceptor;
+				//$tablat[$i][8] = $obj->RFCreceptor;
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			if (! empty($arrayfields['NombreReceptor']['checked']))
+			{
+				print '<td class="nowrap">';
+				if($emisorRfc == $obj->RFCreceptor)
+				{
+					$tsql="SELECT rowid FROM ".MAIN_DB_PREFIX."societe WHERE siren='".$emisorRfc."'";
+					$tc= $db->query($tsql);
+					if($tc)
+					{
+						$nm = $db->num_rows($tc);
+						if($nm)
+						{
+							$objt = $db->fetch_object($tc);
+							if($objt)
+							{
+								print "<a href='../societe/card.php?socid=".$objt->rowid."'>".strtoupper($obj->NombreReceptor)."</a>";
+								//$tablat[$i][9] = "<a href='../societe/card.php?socid=".$objt->rowid."'>".$obj->NombreReceptor."</a>";
+							}
+							else
+							{
+							print strtoupper($obj->NombreReceptor);
+							//$tablat[$i][9] = $obj->NombreReceptor;
+							}
+						}
+						else
+						{
+						print strtoupper($obj->NombreReceptor);
+						//$tablat[$i][9] = $obj->NombreReceptor;
+						}
+						
+					}
+					else
+					{
+						print strtoupper($obj->NombreReceptor);
+						//$tablat[$i][9] = $obj->NombreReceptor;
+					}
+				}
+				else
+				{
+					print strtoupper($obj->NombreReceptor);
+					//$tablat[$i][9] = $obj->NombreReceptor;
+				}
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			if (! empty($arrayfields['fechaEmision']['checked']))
+			{
+				print '<td class="nowrap">';
+				print $obj->fechaEmision;
+				//$tablat[$i][10] = $obj->fechaEmision;
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			if (! empty($arrayfields['fechaCertificacion']['checked']))
+			{
+				print '<td class="nowrap">';
+				print $obj->fechaCertificacion;
+				//$tablat[$i][11] = $obj->fechaCertificacion;
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			if (! empty($arrayfields['PAC']['checked']))
+			{
+				print '<td class="nowrap">';
+				print $obj->PAC;
+				//$tablat[$i][12] = $obj->PAC;
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			if (! empty($arrayfields['Total']['checked']))
+			{
+				print '<td class="nowrap">';
+				print $obj->Total;
+				//$tablat[$i][13] = $obj->Total;
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			if (! empty($arrayfields['Efecto']['checked']))
+			{
+				print '<td class="nowrap">';
+				print $obj->Efecto;
+				//$tablat[$i][14] = $obj->Efecto;
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			if (! empty($arrayfields['Estado']['checked']))
+			{
+				print '<td class="nowrap">';
+				print $obj->Estado;
+				//$tablat[$i][15] = $obj->Estado;
+				print '</td>';
+				if (! $i) $totalarray['nbfield']++;
+			}
+			
+			//print_r($consepto . " ". $emisorRfc);
+				$sql2="SELECT count(*) as exist FROM ".MAIN_DB_PREFIX."societe WHERE siren='".$emisorRfc."' AND entity='".$conf->entity."'";
+				$dd=$db->query($sql2);
+				if($dd)
+				{
+					$rs = $db->fetch_object($dd);
+					if($rs->exist == 0)
+					{
+						$sql2 = "INSERT INTO ".MAIN_DB_PREFIX."societe (nom,fk_pays,siren,idprof4,";
+					
+						if($emisorRfc == $obj->RFCreceptor)
+						{
+							$sql2 .="client";
+							$nom = $obj->NombreReceptor;
+							
+						}
+						else
+						{
+							$sql2 .= "fournisseur";
+							$nom = $obj->NombreEmisor;
+						}
+						$sql2.= ",fk_user_creat)";
+						$sql2 .="VALUES(";
+						$sql2 .= "'".$nom . "',154,'" .$emisorRfc . "','" .$emisorRfc ."',1,1)";
+						
+				  }
+					else
+					{
+						$sql2 = "";
+					}
+
+				}
+				else
+				{
+					$sql2 = "";
+				}
+			
+			if($sql2 != "")
+			{
+				//print_r($sql2);
+				try
+				{
+					$es = $db->query($sql2);
+					if($es)
+					{
+						$terceroscreados = true;
+					}
+					
+				}
+				catch(Exception $e)
+				{
+					//print_r($e);
+				}
+				
+			}
+			$i++;
+		}
+	}
+	else
+	{
+		print '<tr>';
+		print '<td colspan="5" class="opacitymedium">'.$langs->trans('NoRecordFound').'</td>';
+		print '</tr>';
+	}
+	$db->free($resql);
+
+	print "</table>\n";
+	print '</div>';
+	print '</form>';
+	if($terceroscreados)
+	{
+		dol_htmloutput_mesg	("Se han creado nuevos terceros");
+	}
+	
+}
+else
+{
+	dol_print_error($db);
+}
+if(GETPOST('action') == "enviar32")
+{
+
+}
+llxFooter();
+
+$db->close();

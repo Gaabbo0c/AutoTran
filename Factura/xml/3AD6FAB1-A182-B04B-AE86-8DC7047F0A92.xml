@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Serie="FM" Folio="4990" Fecha="2020-03-31T18:30:53" Sello="X++FNTqoNbBmXNtSejRjRe2+1203QeSZFDD6UuUrJCR5zGp4MGgkZLBmXh2azcvsZk+adLNk2yq9gTtmvWI8HGp3P7b6ZUOJqT5A11YM90BR6xbDEs2BVu4dbSlWcp0uZ/aGsmwXN0Ljtt8p/itn0wBF1qzc51gNw82Au8NLNiXA6A8eceoGcRZeotN+zOeMITpdOpK26Gcf5Cv0DPjVf3Pmj3y4zoXJ0NpB7VXRmHVagmEZgXVhAq2xu6eXDEy9XUHyfONR+M1GXL1DB65FPYIyb6RqKOSMaJXTFd51G7SjWAwiw97/4GKQEkKwNFPOa1L5dsX+bxXI3tH2oICfVQ==" FormaPago="03" NoCertificado="00001000000404135203" Certificado="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" CondicionesDePago="CONTADO" SubTotal="47681.43" Moneda="MXN" Total="55310.46" TipoDeComprobante="I" MetodoPago="PUE" LugarExpedicion="83060">
+  <cfdi:Emisor Rfc="TNO971016KG8" Nombre="TRACTOREMOLQUES DEL NOROESTE SA DE CV" RegimenFiscal="601"/>
+  <cfdi:Receptor Rfc="VUM100225H87" Nombre="VIAS Y URBANIZACIONES MVP SA DE CV" UsoCFDI="G03"/>
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="26101755" NoIdentificacion="VO 20919484" Cantidad="24" ClaveUnidad="H87" Unidad="PZ" Descripcion="GUIA VALVULA MOTOR VOLVO D12-D13" ValorUnitario="223.43" Importe="5362.32">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="5362.32" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="857.9712"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40141616" NoIdentificacion="VO 21501189" Cantidad="24" ClaveUnidad="H87" Unidad="PZ" Descripcion="SELLO VALVULA MOTOR ESC-ADM VL D12-D13" ValorUnitario="57.79" Importe="1386.96">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1386.96" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="221.9136"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="26101743" NoIdentificacion="VO 20441486" Cantidad="12" ClaveUnidad="H87" Unidad="PZ" Descripcion="VALVULA ESCAPE MOTOR VOLVO D12 3GEN" ValorUnitario="1353.89" Importe="16246.68">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="16246.68" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="2599.4688"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="26101743" NoIdentificacion="VO 20459326" Cantidad="12" ClaveUnidad="H87" Unidad="PZ" Descripcion="VALVULA ADMISION MOTOR VOLVO D12 3GEN" ValorUnitario="674.38" Importe="8092.56">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="8092.56" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1294.8096"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31162800" NoIdentificacion="VO 85104133" Cantidad="6" ClaveUnidad="H87" Unidad="PZ" Descripcion="FUNDA INYECTOR TIPO NVO 21351717 D12-970" ValorUnitario="872.50" Importe="5235.00">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="5235.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="837.60"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="78181508" Cantidad="1" ClaveUnidad="ACT" Unidad="ACT" Descripcion="MANO DE OBRA MATRIZ&#10;MANO DE OBRA TORNO Y CAMBIAR CAMISILLAS" ValorUnitario="11357.91" Importe="11357.91">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="11357.91" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1817.2656"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="7629.03">
+    <cfdi:Traslados>
+      <cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="7629.03"/>
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+<cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="3AD6FAB1-A182-B04B-AE86-8DC7047F0A92" FechaTimbrado="2020-03-31T19:34:22" RfcProvCertif="SCD110105654" SelloCFD="X++FNTqoNbBmXNtSejRjRe2+1203QeSZFDD6UuUrJCR5zGp4MGgkZLBmXh2azcvsZk+adLNk2yq9gTtmvWI8HGp3P7b6ZUOJqT5A11YM90BR6xbDEs2BVu4dbSlWcp0uZ/aGsmwXN0Ljtt8p/itn0wBF1qzc51gNw82Au8NLNiXA6A8eceoGcRZeotN+zOeMITpdOpK26Gcf5Cv0DPjVf3Pmj3y4zoXJ0NpB7VXRmHVagmEZgXVhAq2xu6eXDEy9XUHyfONR+M1GXL1DB65FPYIyb6RqKOSMaJXTFd51G7SjWAwiw97/4GKQEkKwNFPOa1L5dsX+bxXI3tH2oICfVQ==" NoCertificadoSAT="00001000000502000436" SelloSAT="IIfj2Z8q+gg2hAEh/RtaYFPoJMq5n8m7UYECKy3KjtsIa3zHVwkefzOGqXFvXeYUWDjtFmUElpdZGCO6SEhNPImhV6+8gxSWzKbic2e8fJfA37CBMrOZa5/3f3dShuiXjveipdbslqdfbE4L0rWrYxMP2g6XB7irxjK41HtD+pcgG9h2bP06rInrQ/2VQ9NqDepsPMsBnFbYWCbBdS6AHgWccTw1OOhDvsiusoul+NGhDKrXY9eIfZasHHSwKErdcbv/WkMjla0RVP94Ulzq2bwBMg6qESPm20KAjCer4gUcnYBTpmJLAb5+yNVsizEYdQ75XBBG7xNKIgs1ziJ7Aw=="/>
+</cfdi:Complemento></cfdi:Comprobante>

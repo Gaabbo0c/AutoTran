@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?><cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Serie="SM" Folio="15" Fecha="2020-04-15T10:09:58" Sello="DwGiqQOxl8EelUVVv+lhdVh3JoBadiHHyDm7h2Vw7xQ8aCwLdqlHRnP8egIux+Yczr7RaHz757sfL0HXkwWXWJjJzxDgBG/T4TRNGLAPmAsU6xwFYh+vd/ThoTS/UWFrnk4sm+0P5jkvabN2ru8AkUVbjVN92EkGXrez3TeHRFIGsZi0irPETjIaFhxKhNKGcmeMpJFdYbN6af7KzqqoPmp7uYqY7L64xTRkvmKnZKlYOehmOwirwYyk1I1kM8tHU2qIpoAg8E+/pxMHa2fKxTg2PuPgDgW1V0jdWJEn6vUkELrxTXura1x+lSmna6v1khMq97JQzm8i83wq4RAG7g==" FormaPago="03" NoCertificado="00001000000404135203" Certificado="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" CondicionesDePago="CONTADO" SubTotal="214879.09" Descuento="58152.38" Moneda="MXN" Total="181802.98" TipoDeComprobante="I" MetodoPago="PUE" LugarExpedicion="83060">
+  <cfdi:CfdiRelacionados TipoRelacion="07">
+    <cfdi:CfdiRelacionado UUID="FF52BA15-CE18-7B46-8852-B159352B87CD"/>
+  </cfdi:CfdiRelacionados>
+  <cfdi:Emisor Rfc="TNO971016KG8" Nombre="TRACTOREMOLQUES DEL NOROESTE SA DE CV" RegimenFiscal="601"/>
+  <cfdi:Receptor Rfc="VUM100225H87" Nombre="VIAS Y URBANIZACIONES MVP SA DE CV" UsoCFDI="G03"/>
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="26101738" NoIdentificacion="VO 20463858" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="LIGA TAPA ADMISION B12B D12" ValorUnitario="596.29" Importe="596.29" Descuento="202.44">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="393.85" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="63.016"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31181701" NoIdentificacion="VO 11996" Cantidad="4" ClaveUnidad="H87" Unidad="PZ" Descripcion="RONDANA BRONCE TORNILLO BANJOR" ValorUnitario="7.47" Importe="29.88" Descuento="10.12">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="19.76" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="3.1616"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31401704" NoIdentificacion="VO 21123014" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="EMPAQUE PUNTER/MOTO D12C 9700 ACOSTADO" ValorUnitario="1639.98" Importe="1639.98" Descuento="464.11">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1175.87" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="188.1392"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31162800" NoIdentificacion="VO 276948" Cantidad="6" ClaveUnidad="H87" Unidad="PZ" Descripcion="LIGA INYECTOR D13 D12 9700" ValorUnitario="125.28" Importe="751.68" Descuento="228.81">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="522.87" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="83.6592"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31162800" NoIdentificacion="VO 276630" Cantidad="6" ClaveUnidad="H87" Unidad="PZ" Descripcion="METALES ARBOL DE LEVAS 9700" ValorUnitario="488.11" Importe="2928.66" Descuento="718.40">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="2210.26" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="353.6416"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31162800" NoIdentificacion="VO 20503200" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="METALES ARBOL LEVAS CANDADO" ValorUnitario="897.93" Importe="897.93" Descuento="220.26">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="677.67" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="108.4272"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31401600" NoIdentificacion="VO 20489341" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="MOLDURA RETEN VN 2" ValorUnitario="398.25" Importe="398.25" Descuento="97.69">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="300.56" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="48.0896"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40151739" NoIdentificacion="VO 8149301" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="JUNTA TOMA DE AGUA 041H" ValorUnitario="54.69" Importe="54.69" Descuento="15.48">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="39.21" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="6.2736"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40151739" NoIdentificacion="VO 8170519" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="JUNTA BASE TERMOSTATO D12" ValorUnitario="61.92" Importe="61.92" Descuento="18.30">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="43.62" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="6.9792"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="41112209" NoIdentificacion="VO 8149182" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="TERMOSTATO MOTOR VED12 3GEN 7550" ValorUnitario="2156.04" Importe="2156.04" Descuento="561.43">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1594.61" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="255.1376"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31162800" NoIdentificacion="VO 20784537" Cantidad="2" ClaveUnidad="H87" Unidad="PZ" Descripcion="EMPAQUE TURBO BASE 9700" ValorUnitario="85.29" Importe="170.58" Descuento="48.29">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="122.29" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="19.5664"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31401708" NoIdentificacion="VO 3099100" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="JUNTA CABEZA MOTOR D12 7550 LINIAL" ValorUnitario="4826.69" Importe="4826.69" Descuento="1365.95">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="3460.74" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="553.7184"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="26101764" NoIdentificacion="VO 20521943" Cantidad="6" ClaveUnidad="H87" Unidad="PZ" Descripcion="CONJUNTO PISTON ( CAMISA PISTON ANILLOS" ValorUnitario="22291.10" Importe="133746.60" Descuento="43066.41">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="90680.19" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="14508.8304"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="26101900" NoIdentificacion="VO 276134" Cantidad="6" ClaveUnidad="H87" Unidad="PZ" Descripcion="METALES BIELA MOTOR VOLVO" ValorUnitario="722.29" Importe="4333.74" Descuento="1242.92">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="3090.82" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="494.5312"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31401607" NoIdentificacion="VO 20710229" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="EMPAQUE CARTER EN KIT" ValorUnitario="2865.32" Importe="2865.32" Descuento="897.70">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1967.62" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="314.8192"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40151700" NoIdentificacion="VO 21092243" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="ORINGS TUBERIA ACEITE TURBO" ValorUnitario="59.99" Importe="59.99" Descuento="16.98">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="43.01" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="6.8816"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40161504" NoIdentificacion="VO 21707132" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="FILTRO ACEITE MOTOR VOLVO VED1 BY PASS" ValorUnitario="501.61" Importe="501.61" Descuento="186.15">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="315.46" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="50.4736"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40161504" NoIdentificacion="VO 21707133" Cantidad="2" ClaveUnidad="H87" Unidad="PZ" Descripcion="FILTRO ACEITE MOTOR VOLVO VD12" ValorUnitario="373.43" Importe="746.86" Descuento="277.16">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="469.70" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="75.152"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="15121807" NoIdentificacion="LOC 758" Cantidad="12" ClaveUnidad="H87" Unidad="PZ" Descripcion="ANTICONG.PEAK ROJO 50/50 GALON." ValorUnitario="309.24" Importe="3710.88" Descuento="1373.03">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="2337.85" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="374.056"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="15121501" NoIdentificacion="ACV 122736" Cantidad="2" ClaveUnidad="H87" Unidad="PZ" Descripcion="CUBETA VOLVO BLANCA 15W40" ValorUnitario="1122.15" Importe="2244.30" Descuento="278.29">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1966.01" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="314.5616"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="26101900" NoIdentificacion="VO 23070440" Cantidad="7" ClaveUnidad="H87" Unidad="PZ" Descripcion="METAL BANCADA STD MACK" ValorUnitario="718.92" Importe="5032.44" Descuento="1424.18">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="3608.26" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="577.3216"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40151739" NoIdentificacion="VO 8130185" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="EMPAQUE PARA TUBO DE AGUA" ValorUnitario="45.54" Importe="45.54" Descuento="12.89">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="32.65" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="5.224"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40151739" NoIdentificacion="VO 8170514" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="JUNTA TOMA AGUA" ValorUnitario="53.97" Importe="53.97" Descuento="15.27">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="38.70" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="6.192"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40151524" NoIdentificacion="VO 22396953" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="BOMBA ACEITE 7550 D12C" ValorUnitario="15710.00" Importe="15710.00" Descuento="3852.09">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="11857.91" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1897.2656"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31181701" NoIdentificacion="VO 947281" Cantidad="2" ClaveUnidad="H87" Unidad="PZ" Descripcion="RONDANA BRONCE CABEZAL LINEA VOLVO 3GEN" ValorUnitario="6.51" Importe="13.02" Descuento="1.86">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="11.16" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1.7856"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31161814" NoIdentificacion="VO 21948261" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="KIT METAL MEDIA LUNA 4PZA" ValorUnitario="1743.09" Importe="1743.09" Descuento="198.36">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1544.73" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="247.1568"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40151739" NoIdentificacion="VO 1547254" Cantidad="3" ClaveUnidad="H87" Unidad="PZ" Descripcion="LIGA NEGRA 2" ValorUnitario="51.32" Importe="153.96" Descuento="28.59">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="125.37" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="20.0592"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31401507" NoIdentificacion="VO 8170959" Cantidad="6" ClaveUnidad="H87" Unidad="PZ" Descripcion="EMPAQUE MULTIPLE ESCAPE B12 3GEN 9700 D1" ValorUnitario="205.99" Importe="1235.94" Descuento="228.77">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1007.17" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="161.1472"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="27112100" NoIdentificacion="VO 984741" Cantidad="2" ClaveUnidad="H87" Unidad="PZ" Descripcion="TORNILLO EMBRIADAO" ValorUnitario="14.70" Importe="29.40" Descuento="6.28">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="23.12" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="3.6992"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31162800" NoIdentificacion="VO 471708" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="ANILLO RETEN MANGUERA AIRE COMPRESOR" ValorUnitario="25.78" Importe="25.78" Descuento="4.77">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="21.01" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="3.3616"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40151524" NoIdentificacion="VO 21940615" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="LIGA MORADA ANTES 1547255" ValorUnitario="28.91" Importe="28.91" Descuento="3.29">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="25.62" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="4.0992"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31162800" NoIdentificacion="VO 420643" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="EMPAQUE TURBO CENTRO CUADRADO B12-3GEN" ValorUnitario="27.71" Importe="27.71" Descuento="5.13">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="22.58" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="3.6128"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31162800" NoIdentificacion="VO 1546531" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="BRAZO DE SEGURIDAD" ValorUnitario="11.08" Importe="11.08" Descuento="2.05">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="9.03" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1.4448"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="41111954" NoIdentificacion="VO 20576614" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="SENSOR TEMPERATURA B9R B12" ValorUnitario="1451.81" Importe="1451.81" Descuento="206.59">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1245.22" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="199.2352"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31161700" NoIdentificacion="VO 3081501" Cantidad="8" ClaveUnidad="H87" Unidad="PZ" Descripcion="TUERCA TERMINAL 25153442 20837226" ValorUnitario="256.59" Importe="2052.72" Descuento="820.27">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1232.45" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="197.192"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31401600" NoIdentificacion="VO 20714247" Cantidad="1" ClaveUnidad="H87" Unidad="PZ" Descripcion="MOLDURA RETEN VN 3" ValorUnitario="281.16" Importe="281.16" Descuento="52.07">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="229.09" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="36.6544"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="78181508" Cantidad="1" ClaveUnidad="ACT" Unidad="ACT" Descripcion="MANO DE OBRA MATRIZ&#10;ORDENES DE TALLER 237192 DE LA FACT. FM3751&#10;Y 238751 CXF FM148139&#10;CASO ASIST 12613068 UNIDAD SERIE N391280&#10;135,108 KM. SERIE BOMBA OP782/19&#10;STF# 27303, 27341 Y 27354&#10;MANO DE OBRA REPARACION MOTOR" ValorUnitario="24260.67" Importe="24260.67">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="24260.67" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="3881.7072"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="25076.27">
+    <cfdi:Traslados>
+      <cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="25076.27"/>
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+<cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="D69659E5-FBB6-D346-936B-FB8CDECC416F" FechaTimbrado="2020-04-15T13:18:29" RfcProvCertif="SCD110105654" SelloCFD="DwGiqQOxl8EelUVVv+lhdVh3JoBadiHHyDm7h2Vw7xQ8aCwLdqlHRnP8egIux+Yczr7RaHz757sfL0HXkwWXWJjJzxDgBG/T4TRNGLAPmAsU6xwFYh+vd/ThoTS/UWFrnk4sm+0P5jkvabN2ru8AkUVbjVN92EkGXrez3TeHRFIGsZi0irPETjIaFhxKhNKGcmeMpJFdYbN6af7KzqqoPmp7uYqY7L64xTRkvmKnZKlYOehmOwirwYyk1I1kM8tHU2qIpoAg8E+/pxMHa2fKxTg2PuPgDgW1V0jdWJEn6vUkELrxTXura1x+lSmna6v1khMq97JQzm8i83wq4RAG7g==" NoCertificadoSAT="00001000000502000436" SelloSAT="f360Vy6OjxBNxug+3uWsGA8KO0NkWvnKIbCHHTe0ACDIcjCgqkwO/1bsftOfpgRsSu0jo1FxYh+jwjwCAA610LG/Q5a7U2HUUMbDESesrWBhyliZhHvLQcqAjIE7KbZyU0NzI1NyodDzs798UmOpWTNxL1PjWqrrjXfIBOaU97ryJV3IDAa+piMy3GJtoKWyq2a2Nxs8vTZYnpL743X9n8JJyIddsVthgRAHBvgPWoeX/pH/o3q0zIKBxawE7hkwbNrmvx/RnjLcAXi+MSfjlqNmyEsdZ4mXW8MoRb8rAmknjd30FHKON2ZZjKnDG+avCqUVkxXv1KcU1sm9QGAF0g=="/>
+</cfdi:Complemento></cfdi:Comprobante>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Certificado="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" CondicionesDePago="CONTADO" Fecha="2020-03-26T08:34:09" Folio="1427" FormaPago="03" LugarExpedicion="83214" MetodoPago="PUE" Moneda="MXN" NoCertificado="00001000000403289212" Sello="Ne8B40uSZPJJec1uKJLK5DLYJ5Fd2FK8xt78W4r4lOYzY///jmL1YL39bEgH+v4F13gzv66zi8yrKftLMUjxEQPNksCvYB8MLXo93i12uU8m/Ami5CfQy+GpvTuMTb4Tb189M02y6b4oSXZG2ZMKbqNQo6GA2Y+NwJyFdyE8DHVS9t2eeL9F2AITS1s4zaNs/qijLsw3LrUZOU2F3Se1t8iWFPH2sN49I6PLc5XyHTxCPKQ4+sa1x+ZDAmGtH5Wp1gLYAGRpymf/QkCdbVWUegd/nhY7yKTk7EDIiZlTblmf9gOyWvkGklT52ZyhJeY9G+J1ryKy0rhbxXHMrvoI5Q==" Serie="FS54" SubTotal="7695.29" TipoCambio="1" TipoDeComprobante="I" Total="8926.50" Version="3.3" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd">
+  <cfdi:Emisor Nombre="DISTRIBUIDORA DE MAQUINARIA DEL NORTE S.A. DE C.V." RegimenFiscal="601" Rfc="DMN0110295P6"/>
+  <cfdi:Receptor Nombre="VIAS Y URBANIZACIONES MVP SA DE CV" Rfc="VUM100225H87" UsoCFDI="G03"/>
+  <cfdi:Conceptos>
+    <cfdi:Concepto Cantidad="6" ClaveProdServ="72154501" ClaveUnidad="E48" Descripcion="SERVICIO DE MANTENIMIENTO PREVENTIVO A RETROEXCAVADORA 1BZ310LAHKC001775" Importe="3600.00" NoIdentificacion="55080" Unidad="UNIDAD DE SERVICIO" ValorUnitario="600.00">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="3600.00" Importe="576.00" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto Cantidad="1" ClaveProdServ="22101700" ClaveUnidad="H87" Descripcion="Cartucho de filtro(101D08)" Importe="973.52" NoIdentificacion="AT491450" Unidad="PIEZA" ValorUnitario="973.52">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="973.52" Importe="155.76" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto Cantidad="1" ClaveProdServ="22101700" ClaveUnidad="H87" Descripcion="Filtro de aceite(101C04)" Importe="261.80" NoIdentificacion="RE504836" Unidad="PIEZA" ValorUnitario="261.80">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="261.80" Importe="41.88" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto Cantidad="1" ClaveProdServ="22101700" ClaveUnidad="H87" Descripcion="PAPEL MULTIUSOS SCOTT(ESTRUC 1A)" Importe="68.57" NoIdentificacion="PMSCOTT" Unidad="PIEZA" ValorUnitario="68.57">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="68.57" Importe="10.97" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto Cantidad="1" ClaveProdServ="22101700" ClaveUnidad="H87" Descripcion="TRAPO INDUSTRIAL(ESTRUC 1A)" Importe="30.00" NoIdentificacion="GA34" Unidad="PIEZA" ValorUnitario="30.00">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="30.00" Importe="4.80" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto Cantidad="1" ClaveProdServ="22101700" ClaveUnidad="H87" Descripcion="Aceite(ACEITES)" Importe="1253.22" NoIdentificacion="SP17932" Unidad="PIEZA" ValorUnitario="1253.22">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1253.22" Importe="200.51" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto Cantidad="1" ClaveProdServ="22101700" ClaveUnidad="H87" Descripcion="Cartucho de filtro(100E11A)" Importe="406.59" NoIdentificacion="AT332909" Unidad="PIEZA" ValorUnitario="406.59">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="406.59" Importe="65.05" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto Cantidad="1" ClaveProdServ="22101700" ClaveUnidad="H87" Descripcion="Cartucho de filtro(100E11)" Importe="614.72" NoIdentificacion="AT332908" Unidad="PIEZA" ValorUnitario="614.72">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="614.72" Importe="98.35" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto Cantidad="1" ClaveProdServ="22101700" ClaveUnidad="H87" Descripcion="Cartucho de filtro(101B04)" Importe="486.87" NoIdentificacion="RE509031" Unidad="PIEZA" ValorUnitario="486.87">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="486.87" Importe="77.89" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="1231.21">
+    <cfdi:Traslados>
+      <cfdi:Traslado Importe="1231.21" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" FechaTimbrado="2020-03-26T09:35:10" NoCertificadoSAT="00001000000412961981" RfcProvCertif="FCG840618N51" SelloCFD="Ne8B40uSZPJJec1uKJLK5DLYJ5Fd2FK8xt78W4r4lOYzY///jmL1YL39bEgH+v4F13gzv66zi8yrKftLMUjxEQPNksCvYB8MLXo93i12uU8m/Ami5CfQy+GpvTuMTb4Tb189M02y6b4oSXZG2ZMKbqNQo6GA2Y+NwJyFdyE8DHVS9t2eeL9F2AITS1s4zaNs/qijLsw3LrUZOU2F3Se1t8iWFPH2sN49I6PLc5XyHTxCPKQ4+sa1x+ZDAmGtH5Wp1gLYAGRpymf/QkCdbVWUegd/nhY7yKTk7EDIiZlTblmf9gOyWvkGklT52ZyhJeY9G+J1ryKy0rhbxXHMrvoI5Q==" SelloSAT="iGPDZWxS5xUS/3T9d/0S/KoLAZXMcCLDSJ3wpadbIv5h+bX6O+35Gb7vhCzkjVYN/c1FTLtm1zMDDPtDPM1oIhOjyREhZDCrCMM6XEM9QHqmtB5LVFZgVP5xVbs1tGPQi2N3BT6QuTu6/LKQnOeyOFsZAuMZeNyVtjQyRyFzD2n5jmoF4dtQOe4vMPViVaizhsEDKPfpoe1jTOekPEuJs75qh9YM34qJ924+NRnNQ6yutfvrDjoBJ9x6lTiGHiYjMpbEoEzg7T3tfZvZrA0UgzI1ZyGGkR/fEO2hypbQF9zUXOWGZVvZF7XcknNR1vrRbeLzqClv0YgZW4GBkH5Obw==" UUID="F12588D1-27FC-41FB-A1B6-8C25854FE43A" Version="1.1" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/timbrefiscaldigital/TimbreFiscalDigitalv11.xsd"/>
+  </cfdi:Complemento>
+</cfdi:Comprobante>

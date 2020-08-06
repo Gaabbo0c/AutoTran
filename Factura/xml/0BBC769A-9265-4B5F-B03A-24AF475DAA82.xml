@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Folio="492" Fecha="2019-12-30T09:31:11" Sello="CsmwY4YTfAoF1kDnnGLx7shVvffzr+28gLmGDpnJarONhenkABdgl6AO4s7b1bRuR3xr/9Jp9Yy6WzTD/iQ1x73uBVgyguUTtK4rRuSOx77aESueSD70Xm1FDpbWaSTStiu01w46AliqhFu2fZEWAp1XWa+zQdv98ZBeR2H3b+wfZKDuz00K+ZXWOfHcUw5GiUe1aOmrpXmDOnxvpgpgfOwzEkVerpCnOe0E1G008K32FJp9tzNGIDl65GTgJdFBhyhKgXA6JqnATEsEzAPPCGPzvoQZ32oNuf9yyJ0N9H8ek5NT7V1DB+q8dWgzR0pnlHUwyJ/BRfMxu9zjtpvl9w==" FormaPago="03" NoCertificado="00001000000500374033" Certificado="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" CondicionesDePago="CONTADO" SubTotal="362976.42" Moneda="MXN" TipoCambio="1" Total="421052.65" TipoDeComprobante="I" MetodoPago="PUE" LugarExpedicion="83303">
+	<cfdi:Emisor Rfc="CCO190321IP6" Nombre="CREADEM CONSTRUCTORA SA DE CV" RegimenFiscal="601"/>
+	<cfdi:Receptor Rfc="VUM100225H87" Nombre="VIAS Y URBANIZACIONES MVP SA DE CV" UsoCFDI="G03"/>
+	<cfdi:Conceptos>
+		<cfdi:Concepto ClaveProdServ="30111601" NoIdentificacion="30111601" Cantidad="650" ClaveUnidad="MTQ" Unidad="MTQ" Descripcion="Material base" ValorUnitario="125.00" Importe="81250.000000">
+			<cfdi:Impuestos>
+				<cfdi:Traslados>
+					<cfdi:Traslado Base="81250.000000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="13000.000000"/>
+				</cfdi:Traslados>
+			</cfdi:Impuestos>
+		</cfdi:Concepto>
+		<cfdi:Concepto ClaveProdServ="11111700" NoIdentificacion="11111700" Cantidad="750" ClaveUnidad="MTQ" Unidad="MTQ" Descripcion="Material limo" ValorUnitario="155.00" Importe="116250.000000">
+			<cfdi:Impuestos>
+				<cfdi:Traslados>
+					<cfdi:Traslado Base="116250.000000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="18600.000000"/>
+				</cfdi:Traslados>
+			</cfdi:Impuestos>
+		</cfdi:Concepto>
+		<cfdi:Concepto ClaveProdServ="30111600" NoIdentificacion="30111600" Cantidad="50" ClaveUnidad="L71" Unidad="TON" Descripcion="Cal Hidra" ValorUnitario="1400.00" Importe="70000.000000">
+			<cfdi:Impuestos>
+				<cfdi:Traslados>
+					<cfdi:Traslado Base="70000.000000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="11200.000000"/>
+				</cfdi:Traslados>
+			</cfdi:Impuestos>
+		</cfdi:Concepto>
+		<cfdi:Concepto ClaveProdServ="30111601" NoIdentificacion="30111601" Cantidad="150" ClaveUnidad="XSA" Unidad="Saco" Descripcion="Cemento gris" ValorUnitario="225.00" Importe="33750.000000">
+			<cfdi:Impuestos>
+				<cfdi:Traslados>
+					<cfdi:Traslado Base="33750.000000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="5400.000000"/>
+				</cfdi:Traslados>
+			</cfdi:Impuestos>
+		</cfdi:Concepto>
+		<cfdi:Concepto ClaveProdServ="30191800" NoIdentificacion="30191800" Cantidad="5" ClaveUnidad="H87" Unidad="Pieza" Descripcion="Carrucha" ValorUnitario="770.53" Importe="3852.650000">
+			<cfdi:Impuestos>
+				<cfdi:Traslados>
+					<cfdi:Traslado Base="3852.650000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="616.424000"/>
+				</cfdi:Traslados>
+			</cfdi:Impuestos>
+		</cfdi:Concepto>
+		<cfdi:Concepto ClaveProdServ="71101710" NoIdentificacion="71101710" Cantidad="12" ClaveUnidad="DAY" Unidad="Día" Descripcion="Renta de retroexcavadora : 310SL JHON DEERE con pala cargadora de 0.77 m3, cucharón de 0.18 m3, profundidad de excavación de 4.34 m y motor de 98 hp. MODELO 2016" ValorUnitario="3122.80" Importe="37473.600000">
+			<cfdi:Impuestos>
+				<cfdi:Traslados>
+					<cfdi:Traslado Base="37473.600000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="5995.776000"/>
+				</cfdi:Traslados>
+			</cfdi:Impuestos>
+		</cfdi:Concepto>
+		<cfdi:Concepto ClaveProdServ="72141700" NoIdentificacion="72141700" Cantidad="17" ClaveUnidad="DAY" Unidad="Día" Descripcion="Renta de Compactador neumatico" ValorUnitario="1200.01" Importe="20400.170000">
+			<cfdi:Impuestos>
+				<cfdi:Traslados>
+					<cfdi:Traslado Base="20400.170000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="3264.027200"/>
+				</cfdi:Traslados>
+			</cfdi:Impuestos>
+		</cfdi:Concepto>
+	</cfdi:Conceptos>
+	<cfdi:Impuestos TotalImpuestosTrasladados="58076.23">
+		<cfdi:Traslados>
+			<cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="58076.23"/>
+		</cfdi:Traslados>
+	</cfdi:Impuestos>
+	<cfdi:Complemento>
+		<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" Version="1.1" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" SelloSAT="cW1b3e6jESwN29kKsGUyS2KxDjHBuFI7DTW48QW6jEbBh/bLR18iSVvk7X4LMIcxBXh3n0xIBL4IAHlIbdnDGzmvgmNhxgdeDdei58KP9eivWfCl2Be/qeGzwxHc1s6bG9Ot/wmASXZFX2I36N5/OK5r87riULpOUNky5VvwWsHHe/mWr/4n/pfSbhgb3Slq+nXrI7vrdLZuoZn5BVgkEqF7dlqLpXsI2uvceBhAEj7HQiaTGxLXN8EHQ2+NkvIgshlHjHOC1P5tD+hpdSt0EKjYKTNS49/Fk/yt7Ey14pavJS0Eh4xvT/OC9jJcAMKqcmB3G069CQTHdT5MHSGHLg==" NoCertificadoSAT="00001000000404486074" UUID="0BBC769A-9265-4B5F-B03A-24AF475DAA82" FechaTimbrado="2019-12-30T10:31:13" SelloCFD="CsmwY4YTfAoF1kDnnGLx7shVvffzr+28gLmGDpnJarONhenkABdgl6AO4s7b1bRuR3xr/9Jp9Yy6WzTD/iQ1x73uBVgyguUTtK4rRuSOx77aESueSD70Xm1FDpbWaSTStiu01w46AliqhFu2fZEWAp1XWa+zQdv98ZBeR2H3b+wfZKDuz00K+ZXWOfHcUw5GiUe1aOmrpXmDOnxvpgpgfOwzEkVerpCnOe0E1G008K32FJp9tzNGIDl65GTgJdFBhyhKgXA6JqnATEsEzAPPCGPzvoQZ32oNuf9yyJ0N9H8ek5NT7V1DB+q8dWgzR0pnlHUwyJ/BRfMxu9zjtpvl9w==" RfcProvCertif="MAS0810247C0"/>
+	</cfdi:Complemento>
+</cfdi:Comprobante>

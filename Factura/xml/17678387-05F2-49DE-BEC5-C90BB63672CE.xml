@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Certificado="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" CondicionesDePago="CONTADO" Fecha="2019-11-04T09:40:46" Folio="7679" FormaPago="03" LugarExpedicion="83214" MetodoPago="PUE" Moneda="MXN" NoCertificado="00001000000403289212" Sello="ESjy0/W7nYMrAQ1pgBY0QIHyaIXwvxKriaXsuebegtmez5IPIPq7C8runDxM0MWVDHDNHEGk9jYnMDxbvVSWeNyOK7RNq4yITqKIQwFL0HKKhnCv97FfP/uXFCUBGr5qGh5TebHDB0/avfAx575uQ0tKLDyLuts3AItCadJ4m6vtEBDOy7f6o37F+PbORd9sXN3zZHYUfm/tzp2c/WPNCO/mh7VmvXWA5OG/VQE0N/GQC90p/2z7vx25e948eOku0OTDF7egPKE9qQa3aOfFPMM+k6yF7JzQq1ZxPLuGbpnTNwzMeUIlA0FZNp7NnpDyebGGBKIPnUl+cYw0cfOyzw==" Serie="FR54" SubTotal="4865.85" TipoCambio="1" TipoDeComprobante="I" Total="5644.38" Version="3.3" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd">
+  <cfdi:Emisor Nombre="DISTRIBUIDORA DE MAQUINARIA DEL NORTE S.A. DE C.V." RegimenFiscal="601" Rfc="DMN0110295P6"/>
+  <cfdi:Receptor Nombre="VIAS Y URBANIZACIONES MVP SA DE CV" Rfc="VUM100225H87" UsoCFDI="G03"/>
+  <cfdi:Conceptos>
+    <cfdi:Concepto Cantidad="10" ClaveProdServ="22101700" ClaveUnidad="H87" Descripcion="Cerradura(105F08)" Importe="1098.60" NoIdentificacion="TK3L" Unidad="PIEZA" ValorUnitario="109.86">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1098.60" Importe="175.77" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto Cantidad="5" ClaveProdServ="22101700" ClaveUnidad="H87" Descripcion="Bulón(105F08)" Importe="805.25" NoIdentificacion="TK225P" Unidad="PIEZA" ValorUnitario="161.05">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="805.25" Importe="128.84" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto Cantidad="5" ClaveProdServ="22101700" ClaveUnidad="H87" Descripcion="Diente(ESTRUC C)" Importe="2962.00" NoIdentificacion="TK225FD" Unidad="PIEZA" ValorUnitario="592.40">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="2962.00" Importe="473.92" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="778.53">
+    <cfdi:Traslados>
+      <cfdi:Traslado Importe="778.53" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" FechaTimbrado="2019-11-04T10:41:26" NoCertificadoSAT="00001000000412961981" RfcProvCertif="FCG840618N51" SelloCFD="ESjy0/W7nYMrAQ1pgBY0QIHyaIXwvxKriaXsuebegtmez5IPIPq7C8runDxM0MWVDHDNHEGk9jYnMDxbvVSWeNyOK7RNq4yITqKIQwFL0HKKhnCv97FfP/uXFCUBGr5qGh5TebHDB0/avfAx575uQ0tKLDyLuts3AItCadJ4m6vtEBDOy7f6o37F+PbORd9sXN3zZHYUfm/tzp2c/WPNCO/mh7VmvXWA5OG/VQE0N/GQC90p/2z7vx25e948eOku0OTDF7egPKE9qQa3aOfFPMM+k6yF7JzQq1ZxPLuGbpnTNwzMeUIlA0FZNp7NnpDyebGGBKIPnUl+cYw0cfOyzw==" SelloSAT="mP4BHfqhnk6SSHyXOLlp+4Gpju+qTGezfXW48FGRSRSSiY0mIW09OVkNOyYj1mJ7fGWKvGuZO1NuNso00fbfg53lVA2UkLw/osgRwwYOA0+XiTDXOAmSB+5MFhXltuoNcM6+voxR/57xGfUnGMdSVG+CuSfqHgfXyNafTXuauOdb6/Zl2KQUjd8QieUZQynNZQNtL0UjGioC3BWScLIZ4Voa9j193ClT6YgE4K4tmzm6hlV00ilrSeZvp2aS1GzdH1dqJXePb3nUtrW1aikAvrPPhyJZYAS5AEKoEbbFqTUI4ETiJmYlwY6l35j3oZen4mjSBae5b0MHFaHVhubfQg==" UUID="17678387-05F2-49DE-BEC5-C90BB63672CE" Version="1.1" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/timbrefiscaldigital/TimbreFiscalDigitalv11.xsd"/>
+  </cfdi:Complemento>
+</cfdi:Comprobante>

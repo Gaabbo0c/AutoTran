@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+</title></head>
+<body>
+    <form method="post" action="./RecuperaCfdi.aspx?Datos=g2G3D+jFkKowFK7hnsVoY1Prrul%2fa6ABDXNofL1ROy7D91ZaUE5QDxV%2f8%2f5cwYXz1McDQnBMi4zwG1r6cjHQAWDoNba2z%2febH6kffMrAn0J5cdDemGHj%2fhFuaprYt1QbNX5t8Xu0mDgwyC0ejN0rfpbpQx%2fxlIwQENXA27xzVFNDyS0SuR0le36i9q3Q2W6wGZXmLcdch++bahbCfPksg6r7Vy+jvzZiznxPrD9mxUyghlOQ25XKFvHRR5%2fLxqEsQk8bmnLYmt9eHaE804SNe+4Si8+EE1EtoEYwKLPURRAlsCqquYuVZJHlqx0Plp5zVbdeBKhZiPgtSmviCuDpbQrlLy+QSyrE%2fuYVtsTnKYEgeORts52vXZdVVPtWU0pGQ9AWi2isch7enwAuNASqKD3iYAnFW0MCgqVeL53hqyGcBJ098MdGOsGJ4FAWdLf3jGaIVPBP0CQyiKUgTJMgpKF8oPyEdhYsWp7lBz4qp8eD+TKw%2f+g8tSyamGXx5XM2beDPyB3KcXxGBkdOzAJIa9BuryJvJr2MkDYrvBpIg4hyL%2fSCgePgvVKnEXXKbw4jbcHAiNiYgkD9mvhuBaXNWdLwUy4m5Ps736GHVsXCADc%3d" id="form1">
+<input type="hidden" name="__CSRFTOKEN" id="__CSRFTOKEN" value="/wEFJDQyNjZhYzc5LTk2N2ItNGFjYi1hNTQ2LThiMzBmMWRhMjdkYg==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="sbGdGC/XlhHuH5LFduhDTAs21ZaltaF++EmhaTRMobQD7G9HbEdD6XgPxkXBP3gYGWSjCPCc03QAFD2fh78oKYpA8PeI6q8gPY8kGfWBhzPnPXfs5192xSohSj9XejF0IFV99afOltW4F0Vy0/Um4//ZEKtn0EcbtSmaTSCBBrWQWEqSatWqP1xxe4EG3t7T83mUQEPi8fEL8UMXIYjxujnRka3BtY07/m7FSGwq7Fvcx4cKy1+kDmoKH/JvAeb0/Vte6naTvWY992+SIuVrDJiczrJw6iVrvpABGasQ/7wtWO4IiZ4Ld9enqSWH2WaMSpe3EBlsmFiKOxQz/4XwXQ==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="098A871E" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+    <div>
+       <span id="lblMensaje">Ya no puedes descargar más documentos. Por seguridad únicamente se permite descargar un máximo de 2,000 archivos por día.</span>
+    </div>
+    </form>
+</body>
+</html>
